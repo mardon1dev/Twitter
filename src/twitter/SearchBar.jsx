@@ -1,20 +1,20 @@
-import React, { useState } from 'react'
 import {CiSearch} from 'react-icons/ci';
 import { AiOutlineMore } from "react-icons/ai";
 import { FiSettings } from 'react-icons/fi';
 import Author from "./author.jpg";
-
 
 import './searchbar.scss';
 
 const SearchBar = () => {
 
   return (
-    <div className='searching'>
-        <div className='searchbar pt-3'>
-            <div className='searchbar__input'>
-                <CiSearch className='searchbar__input--search'/>
-                <input className='searchbar__input--input' type="text" placeholder="Search Twitter" />
+    <div className='searching d-none d-lg-block'>
+        <div className='searchbar w-100'>
+            <div className='searchbar-input'>
+                <div className='searchbar__input'>
+                    <CiSearch className='searchbar__input--search'/>
+                    <input className='searchbar__input--input' type="text" placeholder="Search Twitter" />
+                </div>
             </div>
             <div className='searchbar__trend'>
                 <h4 className='searchbar__trend--title'>Trends for you</h4>

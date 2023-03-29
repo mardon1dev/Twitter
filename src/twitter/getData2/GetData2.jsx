@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import ShowData from '../showdata/ShowData';
-import "./getdata.scss"
+import "./getdata/getdata.scss";
 
 const GetData = () => {
 
@@ -9,8 +9,8 @@ const GetData = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get(`https://api.spaceflightnewsapi.net/v3/articles`);
-            setData(response.data);
+            const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=c733780456fe46dcbdd2d24fe4a40f03`);
+            setData(response.data.articles);
         } catch (error) {
             console.error(error);
         }
@@ -20,8 +20,8 @@ const GetData = () => {
         fetchData();
     }, []);
     console.log(data);
-    const filteredData = data.map((news) => (
-        <ShowData key={news.id} id={news.id} title={news.title} img={news.imageUrl} />
+    const filteredData = data.slice(0,10).map((news) => (
+        <ShowData key={news.id} id={news.id} title={news.title} img={news.urlToImage} />
     ));
 
 

@@ -1,0 +1,10 @@
+.explore{
+    flex: 2;
+}
+.explorebar{
+    width: 100%;
+    & input{
+        max-width: 100%;
+        width: 100%;
+    }
+}

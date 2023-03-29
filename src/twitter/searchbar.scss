@@ -1,7 +1,10 @@
 
 .searchbar{
-    // max-width: 338px;
+    position: sticky;
+    top: 0;
+    max-width: 420px;
     width: 100%;
+    height: auto;
     display: flex;
     align-items: flex-start; 
     flex-direction: column;
@@ -9,11 +12,19 @@
     border-left: 1px solid #D8D8D8;
     padding-left: 28px;
     padding-bottom: 100px;
+    flex: 1;
+    &-input{
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+        background-color: #fff;
+        padding: 5px 0;
+    }
     &__input{
         position: relative;
         width: 100%;
         &--input{
-            max-width: 373px;
             width: 100%;
             height: 55px;
             background: #EFF3F4;
@@ -65,8 +76,7 @@
             font-size: 18px;
             line-height: 100%;
             color: #1DA1F2;
-    }
-
+        }
     }
     &__trends{
         display: flex;
