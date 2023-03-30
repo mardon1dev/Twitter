@@ -14,7 +14,14 @@
     flex-direction: column;
     justify-content: space-between;
     border-right: 1px solid #D8D8D8;
-
+    &-twitter{
+        & svg{
+            width: 40px;
+            height: 40px;
+            color: #0a7dd6;
+        }
+        margin-bottom: 50px;
+    }
     &__list{
         list-style: none;
         display: flex;
@@ -81,19 +88,27 @@
         display: none;
     }
 }
-.menu__list--link:nth-child(1){
-    & svg{
-        color: #1D9BF0;
-        width: 40px;
-        height: 40px;
-    }
-}
+
 .menu__list--link{
     & a{
         text-decoration: none;
         color: black;
         display: flex;
         align-items: center;
+        box-sizing: border-box;
+        &.active{
+            & svg{
+                width: 30px;
+                height: 30px;
+                color: #0a7dd6;
+                position: relative;
+               
+            }
+           & span{
+            color: #0a7dd6;
+           }
+           
+        }
         & svg {
             width: 25px;
             height: 25px;
@@ -160,6 +175,9 @@
         height: 8vh;
         justify-content: space-between;
         padding-bottom: 0;
+        &-twitter{
+            display: none;
+        }
         &__list{
             flex-direction: row;
             justify-content: space-around;
@@ -167,10 +185,7 @@
             width: 100%;
             padding-left: 0;
             margin-bottom: 0;
-            & li:nth-child(1){
-                display: none;
-            }
-            & li:nth-child(n+7){
+            & li:nth-child(n+6){
                 display: none;
             }
         }
@@ -190,7 +205,4 @@
             padding: 0;
         }
     }
-}
-.active{
-    color: #1D9BF0;
 }

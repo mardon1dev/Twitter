@@ -7,14 +7,16 @@ import './explore.scss'
 const Explore = () => {
   return (
     <div className='explore w-100'>
-        <div className='explorebar pt-3 px-3'>
-            <div className='searchbar__input'>
-                <CiSearch className='searchbar__input--search'/>
-                <input className='searchbar__input--input w-100' type="text" placeholder="Search Twitter" />
+        <div className='explorebar px-3'>
+            <div className='explorebar-input'>
+                <div className='searchbar__input'>
+                    <CiSearch className='searchbar__input--search'/>
+                    <input className='searchbar__input--input w-100' type="text" placeholder="Search Twitter" />
+                </div>
+                <FiSettings className='setting'/>
             </div>
             <div className='searchbar__trend '>
                 <h4 className='searchbar__trend--title'>Trends for you</h4>
-                <FiSettings className='setting'/>
                 <div className='searchbar__trends'>
                     <div className='searchbar__trends--list'>
                         <div className='trend'>
@@ -90,4 +92,4 @@ const Explore = () => {
   )
 }
 
-export default Explore
+export default Explore;

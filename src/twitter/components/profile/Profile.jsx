@@ -1,9 +1,14 @@
-import React from 'react'
+
 import { BiArrowBack } from "react-icons/bi";
+import TweetAdd from '../TweetAdd';
+
+import "./profile.scss"
+
 
 const Profile = () => {
+
   return (
-    <div className='profile'>
+    <div className='profile w-100'>
         <div className='profileall'>
           <div className='profileall__header'>
             <BiArrowBack/>
@@ -17,13 +22,13 @@ const Profile = () => {
             </div>
             <div>
               <div className='profileall__profile--name'>
-                  
               </div>
             </div>
           </div>
         </div>
+        <TweetAdd/>
     </div>
   )
 }
 
-export default Profile
+export default Profile;

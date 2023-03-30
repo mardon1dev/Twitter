@@ -21,12 +21,10 @@ const MenuBar = () => {
   return (
     <div className="menu">
         <div className="menubar pt-1 pb-1">
+            <NavLink to="/home" className="menubar-twitter">
+                <FaTwitter/>
+            </NavLink>
             <ul className="menubar__list">
-                <li className="menu__list--link mb-3">
-                    <NavLink to="/home">
-                        <FaTwitter/>
-                    </NavLink>
-                </li>
                 <li className="menu__list--link">
                     <NavLink to="/home">
                         <FaHome/>

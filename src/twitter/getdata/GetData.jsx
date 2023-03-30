@@ -19,7 +19,6 @@ const GetData = () => {
     useEffect(() => {
         fetchData();
     }, []);
-    console.log(data);
     const filteredData = data.map((news) => (
         <ShowData key={news.id} id={news.id} title={news.title} img={news.imageUrl} />
     ));
